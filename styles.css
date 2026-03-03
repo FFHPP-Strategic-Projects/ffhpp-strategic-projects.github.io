@@ -102,6 +102,10 @@ main{ padding: 2rem 0 3rem; }
   margin-bottom: .6rem;
 }
 
+.section-header > div:first-child {
+  min-width:0;
+}
+
 .kicker{
   text-transform: uppercase;
   font-size: .78rem; letter-spacing: .06em;
@@ -112,16 +116,19 @@ main{ padding: 2rem 0 3rem; }
 /* ---------------- Search tools ---------------- */
 
 .tools{
-  display: flex; gap: .5rem; align-items: center; flex-wrap: wrap;
+  margin-left: auto; display: flex; gap: .5rem; align-items: center; flex-wrap: nowrap;
 }
+
 #search{
-  min-width: 260px;
+  width: 280px;
+  max-width: 100%;
   padding: .65rem .8rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   outline: none;
   background: var(--surface);
 }
+
 #search:focus{ border-color: var(--brand-acc); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-acc) 22%, transparent); }
 
 /* ---------------- Project list ---------------- */
