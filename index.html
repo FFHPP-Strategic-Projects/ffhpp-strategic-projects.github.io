@@ -17,28 +17,27 @@
   <meta name="robots" content="noindex, nofollow, noarchive" />
   <meta name="referrer" content="no-referrer" />
 
-  <!-- Social preview (optional) -->
+  <!-- Social preview: displays when sharing link in teams -->
   <meta property="og:title" content="FFHPP Strategic Projects — Hub" />
   <meta property="og:description" content="Stakeholder-facing hub for FFHPP project sites and resources." />
   <meta property="og:image" content="https://ffhpp-strategic-projects.github.io/assets/social-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0B3D91" />
 
-  <!-- Reuse the exact same stylesheet as your RBT2 page -->
+  <!-- Styles: To update, must edit styles.css file -->
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <!-- ===== Header (same structure/classes as RBT2) ===== -->
+  <!-- ===== Header ===== -->
   <header class="site-header" role="banner">
     <div class="container">
       <div class="site-brand">
-        <!-- Replace the logo if needed -->
+        <!-- Replace the logo if needed. Update dfo-logo.png to title of logo file -->
         <img src="./assets/dfo-logo.png" alt="Fisheries and Oceans Canada" class="site-logo-img" />
         <div>
           <h1 class="site-title">FFHPP Strategic Projects</h1>
-          <p class="site-subtitle">
-            Stakeholder-facing hub for project sites and resources.
+          <p class="site-subtitle">Stakeholder-facing hub for project sites and resources.
           </p>
         </div>
       </div>
@@ -47,15 +46,31 @@
 
   <main id="content" class="container" role="main">
 
-    <!-- ===== Section: Project Library (mirrors RBT2 heading rhythm) ===== -->
+      <!-- ===== Section: Additional Resources ===== -->
+    <section class="section" aria-labelledby="projects-title">
+      <div class="section-header">
+        <div>
+          <p class="kicker" style="margin-top:0;">Additional Resources</p>
+          <h2 id="projects-title" style="margin:0;">TBD Info...IK sharing? IHPP Funding info?</h2>
+        </div>
+    
+    <!-- ===== Section: Project Library  ===== -->
     <section class="section" aria-labelledby="projects-title">
       <div class="section-header">
         <div>
           <p class="kicker" style="margin-top:0;">Project Library</p>
-          <h2 id="projects-title" style="margin:0;">Available Project Sites</h2>
+          <h2 id="projects-title" style="margin:0;">Active Projects</h2>
         </div>
 
-        <!-- Optional rounded search (works with the script’s filter if present) -->
+            <!-- ===== Section: Contact Us  ===== -->
+    <section class="section" aria-labelledby="projects-title">
+      <div class="section-header">
+        <div>
+          <p class="kicker" style="margin-top:0;">Contact Us</p>
+          <h2 id="projects-title" style="margin:0;">maybe delete this line??</h2>
+        </div>
+        
+        <!-- Search bar -->
         <div class="tools">
           <label for="search" class="visually-hidden">Search projects</label>
           <input id="search" type="search" placeholder="Search projects…" autocomplete="off" />
@@ -72,11 +87,11 @@
       -->
       <ul id="project-list" class="doc-list" aria-live="polite">
 
-        <!-- Example: RBT2 Project card -->
+        <!-- RBT2 Project card -->
         <li class="doc" data-title="Roberts Bank Terminal 2 Project">
           <div class="doc-body">
             <h3 class="doc-title">Roberts Bank Terminal 2 Project</h3>
-            <p class="doc-meta">Site • v1.0 • Updated March 2026</p>
+            <p class="doc-meta">Application Completeness: July 2023 • Timeline: 2 Years • Status: Under Review </p>
           </div>
           <div class="doc-actions">
-            <a class="btn btn-primary" href="https://ffhpp-strategic-projects.github.io/Roberts-Bank-Terminal-2-Project/" target="_blank" rel="noopener noreferrer">Open Site</a>
+            <a class="btn btn-primary" href="https://ffhpp-strategic-projects.github.io/Roberts-Bank-Terminal-2-Project/" target="_blank" rel="noopener noreferrer">View</a>
