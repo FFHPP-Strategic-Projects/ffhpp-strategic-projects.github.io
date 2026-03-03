@@ -16,27 +16,30 @@
   <meta name="theme-color" content="#0B3D91" />
 
   <style>
-    /* -------------------------------
-       Brand + base styles
-    --------------------------------*/
-    :root{
-      --brand-navy:#0B3D91;
-      --brand-teal:#007E7A;
-      --brand-light:#F5F7FA;
-      --text-900:#1F2937;
-      --text-600:#4B5563;
-      --border:#d4dce3;
-      --focus:#94C3FF; /* high-contrast focus outline */
-    }
+    :root {
+  /* Brand */
+  --brand-navy: #0B3D91;   /* header background */
+  --brand-teal: #007E7A;   /* accent (optional) */
 
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; }
-    body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text-900);
-      background:var(--brand-light);
-      line-height:1.5;
-    }
+  /* Document-library look */
+  --button-blue: #0A5F83;  /* primary pill button (RBT2-like) */
+  --button-blue-hover: #084F6C;
+  --border: #DFE6EE;       /* soft card border */
+  --bg-card: #FFFFFF;      /* card bg */
+  --bg-page: #F6F9FC;      /* page bg (very light) */
+  --text-900: #1F2937;     /* titles */
+  --text-700: #334155;     /* body / description */
+  --muted: #6B7280;        /* meta line */
+  --focus: #94C3FF;        /* keyboard focus outline */
+}
+
+   body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text-900);
+  background: var(--bg-page);    /* ← update this */
+  line-height: 1.5;
+}
 
     a{ color:var(--brand-teal); text-decoration:none; }
     a:hover{ text-decoration:underline; }
@@ -47,7 +50,7 @@
     }
 
     /* -------------------------------
-       Header (like the RBT2 page)
+       Header
     --------------------------------*/
     .site-header{
       background:var(--brand-navy);
@@ -63,6 +66,10 @@
     .site-title{
       margin:0; font-size:1.25rem; font-weight:700;
     }
+
+    <div class="toolbar">
+  <input class="search" type="search" placeholder="Search projects..." aria-label="Search projects" />
+</div>
 
     /* -------------------------------
        Layout
@@ -85,55 +92,105 @@
     /* -------------------------------
        Cards (rounded, soft borders, hover shadow)
     --------------------------------*/
-    .card-grid{
-      margin-top:20px;
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap:16px;
-    }
-    .card{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:16px 16px 18px;
-      box-shadow:0 1px 3px rgba(0,0,0,0.06);
-      transition:box-shadow .2s ease;
-    }
-    .card:hover{
-      box-shadow:0 6px 18px rgba(0,0,0,0.12);
-    }
-    .card h3{
-      margin:0 0 6px;
-      font-size:1.1rem;
-      color:var(--text-900);
-    }
-    .card p{
-      margin:0 0 12px;
-      color:var(--text-600);
-    }
+    .card-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* roomy like the screenshot */
+  gap: 16px;
+}
 
-    .actions{
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .btn{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:8px;
-      font-weight:600;
-      text-decoration:none;
-      border:1px solid transparent;
-      transition:filter .15s ease;
-    }
-    .btn:hover{ filter:brightness(0.95); }
-    .btn.primary{
-      background:var(--brand-teal);
-      color:#fff;
-    }
-    .btn.secondary{
-      background:#fff;
-      color:var(--brand-teal);
-      border-color:var(--brand-teal);
-    }
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;                      /* round */
+  padding: 18px 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);   /* subtle */
+  transition: box-shadow .2s ease, transform .05s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-900);
+}
+.card .meta {
+  margin: 2px 0 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+  .actions {
+  margin-top: 6px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;           /* pill height */
+  border-radius: 9999px;        /* ← pill shape */
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  line-height: 1;
+  transition: filter .15s ease, background-color .15s ease, border-color .15s ease;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.btn.primary {
+  background: var(--button-blue);
+  color: #fff;
+}
+.btn.primary:hover {
+  background: var(--button-blue-hover);
+}
+
+.btn.secondary {
+  background: #fff;
+  color: var(--button-blue);
+  border-color: var(--button-blue);      /* outlined look */
+}
+.btn.secondary:hover {
+  filter: brightness(0.98);
+}
+    
+    .section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 6px 0 6px;
+}
+h1 {
+  margin: 0 0 6px;
+  color: var(--text-900);
+  font-size: 1.6rem;
+}
+
+    .toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px 0 8px;
+}
+.search {
+  width: 280px;
+  max-width: 100%;
+  padding: 10px 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text-900);
+}
+.search::placeholder { color: #9AA3AF; }
 
     /* Footer */
     footer{
@@ -151,14 +208,14 @@
   <!-- Header (matches your RBT2 look) -->
   <header class="site-header" role="banner">
     <!-- Replace the src after you upload /assets/logo.png -->
-    <img src="/assets/logo.png" alt="FFHPP logo" />
+    <img src="/assets/dfo-logo.png" alt="FFHPP logo" />
     <p class="site-title">FFHPP Strategic Projects</p>
   </header>
 
   <!-- Main content -->
   <main class="container" role="main">
-    <h1>Project Sites</h1>
-    <p class="intro">Select a project below to open its stakeholder‑facing site. Links open in a new tab.</p>
+    <h1>Active Projects</h1>
+    <p class="section-label">Project Library</p>
 
     <section class="card-grid" aria-label="Project links">
 
