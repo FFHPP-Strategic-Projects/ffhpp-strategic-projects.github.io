@@ -124,7 +124,7 @@ main{ padding: 2rem 0 3rem; }
 }
 #search:focus{ border-color: var(--brand-acc); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-acc) 22%, transparent); }
 
-/* ---------------- Document list ---------------- */
+/* ---------------- Project list ---------------- */
 
 .doc-list{
   list-style: none; padding: 0; margin: 0;
@@ -146,6 +146,7 @@ main{ padding: 2rem 0 3rem; }
 .doc-title{ margin: 0 0 .25rem 0; font-size: 1.05rem; }
 .doc-meta{ margin: 0; color: var(--muted); font-size: .92rem; }
 .doc-actions{ display: flex; gap: .5rem; flex-shrink: 0; }
+.doc-list{ grid-template-columns: 1fr !important; }
 
 /* ---------------- Buttons ---------------- */
 
