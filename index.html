@@ -1,104 +1,82 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>FFHPP Strategic Projects</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Hide from search engines -->
-  <meta name="robots" content="noindex, nofollow, noarchive">
-  <meta name="referrer" content="no-referrer">
-  <link rel="stylesheet" href="./styles.css">
+  <!--
+    FFHPP Strategic Projects — Hub Landing Page
+    Uses the same classes as the RBT2 page so styling matches exactly.
+    Prereqs in this repo:
+      - styles.css   (copied from RBT2 or equivalent)
+      - script.js    (copy-link + optional search; see notes)
+      - assets/dfo-logo.png (or update the path below)
+  -->
+  <meta charset="utf-8" />
+  <title>FFHPP Strategic Projects — Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Shareable but not indexable -->
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
+
+  <!-- Social preview (optional) -->
+  <meta property="og:title" content="FFHPP Strategic Projects — Hub" />
+  <meta property="og:description" content="Stakeholder-facing hub for FFHPP project sites and resources." />
+  <meta property="og:image" content="https://ffhpp-strategic-projects.github.io/assets/social-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0B3D91" />
+
+  <!-- Reuse the exact same stylesheet as your RBT2 page -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
+  <!-- ===== Header (same structure/classes as RBT2) ===== -->
   <header class="site-header" role="banner">
     <div class="container">
       <div class="site-brand">
-        <!-- Replace with a small logo if desired: <img src="./assets/logo.svg" class="site-logo" alt="Organization"> -->
-        <img src="./assets/dfo-logo.png" alt="Fisheries and Oceans Canada" class="site-logo-img">
+        <!-- Replace the logo if needed -->
+        <img src="./assets/dfo-logo.png" alt="Fisheries and Oceans Canada" class="site-logo-img" />
         <div>
-          <h1 class="site-title">Active Projects</h1>
-          <p class="site-subtitle">View status and documents related to active Strategic Projects under review by Pacific Region Fish & Fish Habitat Protection Program (FFHPP).</p>
+          <h1 class="site-title">FFHPP Strategic Projects</h1>
+          <p class="site-subtitle">
+            Stakeholder-facing hub for project sites and resources.
+          </p>
         </div>
       </div>
     </div>
   </header>
 
   <main id="content" class="container" role="main">
-    <section class="section" aria-labelledby="about-title">
-      <p class="kicker">Project Directory</p>
-      <p>put some text in here later that makes sense.</p>
-    </section>
 
-    <section class="section" aria-labelledby="library-title">
+    <!-- ===== Section: Project Library (mirrors RBT2 heading rhythm) ===== -->
+    <section class="section" aria-labelledby="projects-title">
       <div class="section-header">
         <div>
-          <p class="kicker" style="margin-top:0;">Project Directory</p>
-          <h2 id="library-title" style="margin:0;">Active Projects</h2>
+          <p class="kicker" style="margin-top:0;">Project Library</p>
+          <h2 id="projects-title" style="margin:0;">Available Project Sites</h2>
         </div>
+
+        <!-- Optional rounded search (works with the script’s filter if present) -->
         <div class="tools">
           <label for="search" class="visually-hidden">Search projects</label>
-          <input id="search" type="search" placeholder="Search projects…" autocomplete="off">
+          <input id="search" type="search" placeholder="Search projects…" autocomplete="off" />
         </div>
       </div>
 
-      <!-- HOW TO ADD:
+      <!-- HOW TO ADD A PROJECT:
            Duplicate a <li class="doc"> block; update:
-             - data-title (for search)
-             - .doc-title (visible)
-             - .doc-meta (optional: date/version)
-             - href and data-link to ./pdfs/<YourFile>.pdf
+             - data-title (used by search)
+             - .doc-title (visible name)
+             - .doc-meta (status/version/date)
+             - href on "Open Site" to the GitHub Pages URL
+             - data-link on "Copy link" to the same URL
       -->
-      <ul id="doc-list" class="doc-list" aria-live="polite">
-           <li class="doc" data-title="Roberts Bank Terminal 2">
+      <ul id="project-list" class="doc-list" aria-live="polite">
+
+        <!-- Example: RBT2 Project card -->
+        <li class="doc" data-title="Roberts Bank Terminal 2 Project">
           <div class="doc-body">
-            <h3 class="doc-title">Roberts Bank Terminal 2</h3>
-            <p class="doc-meta">Complete Submission: July 2023 • Timeline: 2 Years • Status: Under Review</p>
+            <h3 class="doc-title">Roberts Bank Terminal 2 Project</h3>
+            <p class="doc-meta">Site • v1.0 • Updated March 2026</p>
           </div>
           <div class="doc-actions">
-            <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
-            <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
-          </div>
-        </li>
-        
-        <li class="doc" data-title="Draft Conditions: Batch 1">
-          <div class="doc-body">
-            <h3 class="doc-title">Draft Conditions: Batch 1</h3>
-            <p class="doc-meta">PDF • v1.0 • Uploaded March 2026</p>
-          </div>
-          <div class="doc-actions">
-            <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
-            <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
-          </div>
-        </li>
-
-        <li class="doc" data-title="Draft Conditons: Batch 2">
-          <div class="doc-body">
-            <h3 class="doc-title">Draft Conditions: Batch 2</h3>
-            <p class="doc-meta">PDF • v1.0 • Upload Date TBD</p>
-          </div>
-          <div class="doc-actions">
-            <a class="btn btn-primary" href="./pdfs/Stakeholder_Briefing_Note.pdf" download>Download</a>
-            <button class="btn btn-ghost copy-link" data-link="./pdfs/Stakeholder_Briefing_Note.pdf">Copy link</button>
-          </div>
-        </li>
-      </ul>
-      <p class="empty-state" hidden>No projects match your search.</p>
-    </section>
-
-    <section class="section" aria-labelledby="contact-title">
-      <p class="kicker" style="margin-top:0;">Contact</p>
-      <h2 id="contact-title" style="margin:0;">Project Team</h2>
-      <p>For questions about these materials, please contact Lisa Strychar at Lisa.Strychar@dfo-mpo.gc.ca or Sarah Spagrud at Sarah.Spagrud@dfo-mpo.gc.ca.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>© <span id="year"></span> Document Library • Unclassified materials • For stakeholder distribution</p>
-    </div>
-  </footer>
-
-  <script src="./script.js"></script>
-</body>
-</html>
- 
+            <a class="btn btn-primary" href="https://ffhpp-strategic-projects.github.io/Roberts-Bank-Terminal-2-Project/" target="_blank" rel="noopener noreferrer">Open Site</a>
