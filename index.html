@@ -1,237 +1,104 @@
-  <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
   <title>FFHPP Strategic Projects</title>
-
-  <!-- Keep the hub shareable but not indexed -->
-  <meta name="robots" content="noindex, nofollow" />
-
-  <!-- Social/preview (optional: update image url after upload) -->
-  <meta property="og:title" content="FFHPP Strategic Projects" />
-  <meta property="og:description" content="Stakeholder-facing hub for FFHPP project sites and resources." />
-  <meta property="og:image" content="https://ffhpp-strategic-projects.github.io/assets/social-card.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0B3D91" />
-
-  <style>
-    :root {
-  /* Brand */
-  --brand-navy: #0B3D91;   /* header background */
-  --brand-teal: #007E7A;   /* accent (optional) */
-
-  /* Document-library look */
-  --button-blue: #0A5F83;  /* primary pill button (RBT2-like) */
-  --button-blue-hover: #084F6C;
-  --border: #DFE6EE;       /* soft card border */
-  --bg-card: #FFFFFF;      /* card bg */
-  --bg-page: #F6F9FC;      /* page bg (very light) */
-  --text-900: #1F2937;     /* titles */
-  --text-700: #334155;     /* body / description */
-  --muted: #6B7280;        /* meta line */
-  --focus: #94C3FF;        /* keyboard focus outline */
-}
-
-   body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  color: var(--text-900);
-  background: var(--bg-page);    /* ← update this */
-  line-height: 1.5;
-}
-
-    a{ color:var(--brand-teal); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-    a:focus-visible, button:focus-visible{
-      outline:3px solid var(--focus);
-      outline-offset:2px;
-      border-radius:6px;
-    }
-
-    /* -------------------------------
-       Header
-    --------------------------------*/
-    .site-header{
-      background:var(--brand-navy);
-      color:#fff;
-      padding:12px 20px;
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-    .site-header img{
-      height:44px; width:auto; display:block;
-    }
-    .site-title{
-      margin:0; font-size:1.25rem; font-weight:700;
-    }
-
-    <div class="toolbar">
-  <input class="search" type="search" placeholder="Search projects..." aria-label="Search projects" />
-</div>
-
-    /* -------------------------------
-       Layout
-    --------------------------------*/
-    .container{
-      max-width:1100px;
-      margin:24px auto 56px;
-      padding:0 16px;
-    }
-    .intro{
-      margin:0 0 10px;
-      color:var(--text-600);
-    }
-    h1{
-      margin:0 0 6px;
-      color:var(--brand-navy);
-      font-size:1.75rem;
-    }
-
-    /* -------------------------------
-       Cards (rounded, soft borders, hover shadow)
-    --------------------------------*/
-    .card-grid {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* roomy like the screenshot */
-  gap: 16px;
-}
-
-.card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;                      /* round */
-  padding: 18px 18px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);   /* subtle */
-  transition: box-shadow .2s ease, transform .05s ease;
-}
-.card:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-.card h3 {
-  margin: 0 0 6px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-900);
-}
-.card .meta {
-  margin: 2px 0 12px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-  .actions {
-  margin-top: 6px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 16px;           /* pill height */
-  border-radius: 9999px;        /* ← pill shape */
-  font-weight: 700;
-  text-decoration: none;
-  border: 1px solid transparent;
-  line-height: 1;
-  transition: filter .15s ease, background-color .15s ease, border-color .15s ease;
-}
-
-.btn:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
-}
-
-.btn.primary {
-  background: var(--button-blue);
-  color: #fff;
-}
-.btn.primary:hover {
-  background: var(--button-blue-hover);
-}
-
-.btn.secondary {
-  background: #fff;
-  color: var(--button-blue);
-  border-color: var(--button-blue);      /* outlined look */
-}
-.btn.secondary:hover {
-  filter: brightness(0.98);
-}
-    
-    .section-label {
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin: 6px 0 6px;
-}
-h1 {
-  margin: 0 0 6px;
-  color: var(--text-900);
-  font-size: 1.6rem;
-}
-
-    .toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 10px 0 8px;
-}
-.search {
-  width: 280px;
-  max-width: 100%;
-  padding: 10px 12px;
-  border-radius: 9999px;
-  border: 1px solid var(--border);
-  background: #fff;
-  color: var(--text-900);
-}
-.search::placeholder { color: #9AA3AF; }
-
-    /* Footer */
-    footer{
-      border-top:1px solid var(--border);
-      color:var(--text-600);
-      font-size:.95rem;
-      text-align:center;
-      padding:18px 12px 34px;
-      background:#fff;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Hide from search engines -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
-  <!-- Header (matches your RBT2 look) -->
   <header class="site-header" role="banner">
-    <!-- Replace the src after you upload /assets/logo.png -->
-    <img src="/assets/dfo-logo.png" alt="FFHPP logo" />
-    <p class="site-title">FFHPP Strategic Projects</p>
+    <div class="container">
+      <div class="site-brand">
+        <!-- Replace with a small logo if desired: <img src="./assets/logo.svg" class="site-logo" alt="Organization"> -->
+        <img src="./assets/dfo-logo.png" alt="Fisheries and Oceans Canada" class="site-logo-img">
+        <div>
+          <h1 class="site-title">Active Projects</h1>
+          <p class="site-subtitle">View status and documents related to active Strategic Projects under review by Pacific Region Fish & Fish Habitat Protection Program (FFHPP).</p>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Main content -->
-  <main class="container" role="main">
-    <h1>Active Projects</h1>
-    <p class="section-label">Project Library</p>
+  <main id="content" class="container" role="main">
+    <section class="section" aria-labelledby="about-title">
+      <p class="kicker">Project Directory</p>
+      <p>put some text in here later that makes sense.</p>
+    </section>
 
-    <section class="card-grid" aria-label="Project links">
-
-      <!-- CARD: Roberts Bank Terminal 2 -->
-      <article class="card">
-        <h3>Roberts Bank Terminal 2 Project</h3>
-        <p>Stakeholder‑facing reference site with publicly shareable materials and documents.</p>
-        <div class="actions">
-          <a class="btn primary" href="https://ffhpp-strategic-projects.github.io/Roberts-Bank-Terminal-2-Project/" target="_blank" rel="noopener">Open Site</a>
-          <a class="btn secondary" href="https://github.com/FFHPP-Strategic-Projects/Roberts-Bank-Terminal-2-Project" target="_blank" rel="noopener">View Repository</a>
+    <section class="section" aria-labelledby="library-title">
+      <div class="section-header">
+        <div>
+          <p class="kicker" style="margin-top:0;">Project Directory</p>
+          <h2 id="library-title" style="margin:0;">Active Projects</h2>
         </div>
-      </article>
+        <div class="tools">
+          <label for="search" class="visually-hidden">Search projects</label>
+          <input id="search" type="search" placeholder="Search projects…" autocomplete="off">
+        </div>
+      </div>
 
-      <!-- TEMPLATE: Duplicate this block for each new project
-      <article class="card">
-        <h3>Project Name</h3>
-        <p>One‑sentence description of what the site provides.</p>
-        <div class="actions">
+      <!-- HOW TO ADD:
+           Duplicate a <li class="doc"> block; update:
+             - data-title (for search)
+             - .doc-title (visible)
+             - .doc-meta (optional: date/version)
+             - href and data-link to ./pdfs/<YourFile>.pdf
+      -->
+      <ul id="doc-list" class="doc-list" aria-live="polite">
+           <li class="doc" data-title="Roberts Bank Terminal 2">
+          <div class="doc-body">
+            <h3 class="doc-title">Roberts Bank Terminal 2</h3>
+            <p class="doc-meta">Complete Submission: July 2023 • Timeline: 2 Years • Status: Under Review</p>
+          </div>
+          <div class="doc-actions">
+            <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
+            <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
+          </div>
+        </li>
+        
+        <li class="doc" data-title="Draft Conditions: Batch 1">
+          <div class="doc-body">
+            <h3 class="doc-title">Draft Conditions: Batch 1</h3>
+            <p class="doc-meta">PDF • v1.0 • Uploaded March 2026</p>
+          </div>
+          <div class="doc-actions">
+            <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
+            <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
+          </div>
+        </li>
 
+        <li class="doc" data-title="Draft Conditons: Batch 2">
+          <div class="doc-body">
+            <h3 class="doc-title">Draft Conditions: Batch 2</h3>
+            <p class="doc-meta">PDF • v1.0 • Upload Date TBD</p>
+          </div>
+          <div class="doc-actions">
+            <a class="btn btn-primary" href="./pdfs/Stakeholder_Briefing_Note.pdf" download>Download</a>
+            <button class="btn btn-ghost copy-link" data-link="./pdfs/Stakeholder_Briefing_Note.pdf">Copy link</button>
+          </div>
+        </li>
+      </ul>
+      <p class="empty-state" hidden>No projects match your search.</p>
+    </section>
+
+    <section class="section" aria-labelledby="contact-title">
+      <p class="kicker" style="margin-top:0;">Contact</p>
+      <h2 id="contact-title" style="margin:0;">Project Team</h2>
+      <p>For questions about these materials, please contact Lisa Strychar at Lisa.Strychar@dfo-mpo.gc.ca or Sarah Spagrud at Sarah.Spagrud@dfo-mpo.gc.ca.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Document Library • Unclassified materials • For stakeholder distribution</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+ 
