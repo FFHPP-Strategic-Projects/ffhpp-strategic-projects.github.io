@@ -98,12 +98,12 @@ main{ padding: 2rem 0 3rem; }
 }
 
 .section-header{
-  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  display: flex !important; align-items: flex-start; justify-content: space-between; gap: 1rem;
   margin-bottom: .6rem;
 }
 
-.section-header > div:first-child {
-  min-width:0;
+.section-header .section-title {
+  min-width: 0;
 }
 
 .kicker{
