@@ -1,4 +1,4 @@
-<!doctype html>
+  <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -47,7 +47,7 @@
     }
 
     /* -------------------------------
-       Header
+       Header (like the RBT2 page)
     --------------------------------*/
     .site-header{
       background:var(--brand-navy);
@@ -83,7 +83,7 @@
     }
 
     /* -------------------------------
-       Card grid
+       Cards (rounded, soft borders, hover shadow)
     --------------------------------*/
     .card-grid{
       margin-top:20px;
@@ -111,6 +111,7 @@
       margin:0 0 12px;
       color:var(--text-600);
     }
+
     .actions{
       display:flex; gap:10px; flex-wrap:wrap;
     }
@@ -121,7 +122,9 @@
       font-weight:600;
       text-decoration:none;
       border:1px solid transparent;
+      transition:filter .15s ease;
     }
+    .btn:hover{ filter:brightness(0.95); }
     .btn.primary{
       background:var(--brand-teal);
       color:#fff;
@@ -145,11 +148,33 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header (matches your RBT2 look) -->
   <header class="site-header" role="banner">
     <!-- Replace the src after you upload /assets/logo.png -->
-    <img src="/assets/dfo-logo.png" alt="FFHPP Strategic Projects logo" />
+    <img src="/assets/logo.png" alt="FFHPP logo" />
     <p class="site-title">FFHPP Strategic Projects</p>
   </header>
 
   <!-- Main content -->
+  <main class="container" role="main">
+    <h1>Project Sites</h1>
+    <p class="intro">Select a project below to open its stakeholder‑facing site. Links open in a new tab.</p>
+
+    <section class="card-grid" aria-label="Project links">
+
+      <!-- CARD: Roberts Bank Terminal 2 -->
+      <article class="card">
+        <h3>Roberts Bank Terminal 2 Project</h3>
+        <p>Stakeholder‑facing reference site with publicly shareable materials and documents.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://ffhpp-strategic-projects.github.io/Roberts-Bank-Terminal-2-Project/" target="_blank" rel="noopener">Open Site</a>
+          <a class="btn secondary" href="https://github.com/FFHPP-Strategic-Projects/Roberts-Bank-Terminal-2-Project" target="_blank" rel="noopener">View Repository</a>
+        </div>
+      </article>
+
+      <!-- TEMPLATE: Duplicate this block for each new project
+      <article class="card">
+        <h3>Project Name</h3>
+        <p>One‑sentence description of what the site provides.</p>
+        <div class="actions">
+
