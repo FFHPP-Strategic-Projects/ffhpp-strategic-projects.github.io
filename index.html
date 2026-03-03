@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FFHPP Strategic Projects</title>
+
+  <!-- Keep the hub shareable but not indexed -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Social/preview (optional: update image url after upload) -->
+  <meta property="og:title" content="FFHPP Strategic Projects" />
+  <meta property="og:description" content="Stakeholder-facing hub for FFHPP project sites and resources." />
+  <meta property="og:image" content="https://ffhpp-strategic-projects.github.io/assets/social-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0B3D91" />
+
+  <style>
+    /* -------------------------------
+       Brand + base styles
+    --------------------------------*/
+    :root{
+      --brand-navy:#0B3D91;
+      --brand-teal:#007E7A;
+      --brand-light:#F5F7FA;
+      --text-900:#1F2937;
+      --text-600:#4B5563;
+      --border:#d4dce3;
+      --focus:#94C3FF; /* high-contrast focus outline */
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text-900);
+      background:var(--brand-light);
+      line-height:1.5;
+    }
+
+    a{ color:var(--brand-teal); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    a:focus-visible, button:focus-visible{
+      outline:3px solid var(--focus);
+      outline-offset:2px;
+      border-radius:6px;
+    }
+
+    /* -------------------------------
+       Header
+    --------------------------------*/
+    .site-header{
+      background:var(--brand-navy);
+      color:#fff;
+      padding:12px 20px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .site-header img{
+      height:44px; width:auto; display:block;
+    }
+    .site-title{
+      margin:0; font-size:1.25rem; font-weight:700;
+    }
+
+    /* -------------------------------
+       Layout
+    --------------------------------*/
+    .container{
+      max-width:1100px;
+      margin:24px auto 56px;
+      padding:0 16px;
+    }
+    .intro{
+      margin:0 0 10px;
+      color:var(--text-600);
+    }
+    h1{
+      margin:0 0 6px;
+      color:var(--brand-navy);
+      font-size:1.75rem;
+    }
+
+    /* -------------------------------
+       Card grid
+    --------------------------------*/
+    .card-grid{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap:16px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:16px 16px 18px;
+      box-shadow:0 1px 3px rgba(0,0,0,0.06);
+      transition:box-shadow .2s ease;
+    }
+    .card:hover{
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    }
+    .card h3{
+      margin:0 0 6px;
+      font-size:1.1rem;
+      color:var(--text-900);
+    }
+    .card p{
+      margin:0 0 12px;
+      color:var(--text-600);
+    }
+    .actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:8px;
+      font-weight:600;
+      text-decoration:none;
+      border:1px solid transparent;
+    }
+    .btn.primary{
+      background:var(--brand-teal);
+      color:#fff;
+    }
+    .btn.secondary{
+      background:#fff;
+      color:var(--brand-teal);
+      border-color:var(--brand-teal);
+    }
+
+    /* Footer */
+    footer{
+      border-top:1px solid var(--border);
+      color:var(--text-600);
+      font-size:.95rem;
+      text-align:center;
+      padding:18px 12px 34px;
+      background:#fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <!-- Replace the src after you upload /assets/logo.png -->
+    <img src="/assets/logo.png" alt="FFHPP Strategic Projects logo" />
+    <p class="site-title">FFHPP Strategic Projects</p>
+  </header>
+
+  <!-- Main content -->
