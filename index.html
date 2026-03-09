@@ -1,14 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!--
-    FFHPP Strategic Projects — Hub Landing Page
-    Uses the same classes as the RBT2 page so styling matches exactly.
-    Prereqs in this repo:
-      - styles.css   (copied from RBT2 or equivalent)
-      - script.js    (copy-link + optional search; see notes)
-      - assets/dfo-logo.png (or update the path below)
-  -->
+
   <meta charset="utf-8" />
   <title>FFHPP Strategic Projects — Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,6 +22,7 @@
 </head>
 
 <body>
+ 
   <!-- ===== Header ===== -->
   <header class="site-header" role="banner">
     <div class="container">
@@ -52,49 +46,49 @@
   <div class="section-header">
     <div class="section-title">
       <p class="kicker" style="margin-top:0;">Additional Resources</p>
-      <h2 id="additional-title" style="margin:0;">Downloads & Links</h2>
+      <!-- if a sub heading is wanted, add <h2 id="additional-title" style="margin:0;">text for subheading </h2> directly below this line and update 'text for subheading'-->
     </div>
   </div>
 
-  <!-- IHPP Funding Card -->
-  <ul id="resources-list" class="doc-list" aria-live="polite">
-    <li class="doc" data-title="IHPP Funding">
-      <div class="doc-body">
-        <h3 class="doc-title">IHPP Funding</h3>
-        <p class="doc-meta">PDF • v1.0 • Upload Date TBD</p>
-      </div>
-      <div class="doc-actions">
-        <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
-        <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
-      </div>
-    </li>
+                    <!-- IHPP Funding Card -->
+                    <ul id="resources-list" class="doc-list" aria-live="polite">
+                      <li class="doc" data-title="IHPP Funding">
+                        <div class="doc-body">
+                          <h3 class="doc-title">IHPP Funding</h3>
+                          <p class="doc-meta">PDF • v1.0 • Upload Date TBD</p>
+                        </div>
+                        <div class="doc-actions">
+                          <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
+                          <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
+                        </div>
+                      </li>
 
-    <!--IK Sharing Agreement Card -->
-    <li class="doc" data-title="Indigenous Knowledge Sharing Agreement Information">
-      <div class="doc-body">
-        <h3 class="doc-title">Indigenous Knowledge Sharing Agreement Information</h3>
-        <p class="doc-meta">PDF • v1.0 • Upload Date TBD</p>
-      </div>
-      <div class="doc-actions">
-        <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
-        <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
-      </div>
-    </li>
+                    <!--IK Sharing Agreement Card -->
+                    <li class="doc" data-title="Indigenous Knowledge Sharing Agreement Information">
+                      <div class="doc-body">
+                        <h3 class="doc-title">Indigenous Knowledge Sharing Agreement Information</h3>
+                        <p class="doc-meta">PDF • v1.0 • Upload Date TBD</p>
+                      </div>
+                      <div class="doc-actions">
+                        <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
+                        <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
+                      </div>
+                    </li>
 
-    <!--For Addtional Cards within "Additional Resources", copy and past the section below from <li to </li> and update white text -->
-  
-    <li class="doc" data-title="Indigenous Knowledge Sharing Agreement Information">
-      <div class="doc-body">
-        <h3 class="doc-title">Additional Card for Example</h3>
-        <p class="doc-meta">PDF • v1.0 • Upload Date TBD</p>
-      </div>
-      <div class="doc-actions">
-        <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
-        <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
-      </div>
-    </li>
-    
-    <!-- Paste coding for additional cards within the Additional Resources section above this line -->
+                    <!--For Addtional Cards within "Additional Resources", copy and past the section below from <li to </li> and update white text -->
+                  
+                    <li class="doc" data-title="Indigenous Knowledge Sharing Agreement Information">
+                      <div class="doc-body">
+                        <h3 class="doc-title">Additional Card for Example</h3>
+                        <p class="doc-meta">PDF • v1.0 • Upload Date TBD</p>
+                      </div>
+                      <div class="doc-actions">
+                        <a class="btn btn-primary" href="./pdfs/Project_Overview_2026.pdf" download>Download</a>
+                        <button class="btn btn-ghost copy-link" data-link="./pdfs/Project_Overview_2026.pdf">Copy link</button>
+                      </div>
+                    </li>
+                    
+                    <!-- Paste coding for additional cards within the Additional Resources section above this line -->
   </ul>
 </section>
           
@@ -106,37 +100,37 @@
           <h2 id="projects-title" style="margin:0;">Active Projects</h2>
         </div>
 
-     <!-- ===== Search bar ===== -->
-        <div class="tools">
-          <label for="search" class="visually-hidden">Search projects</label>
-          <input id="search" type="search" placeholder="Search projects…" autocomplete="off" />
-        </div>
-      </div>
+                     <!-- ===== Search bar ===== -->
+                        <div class="tools">
+                          <label for="search" class="visually-hidden">Search projects</label>
+                          <input id="search" type="search" placeholder="Search projects…" autocomplete="off" />
+                        </div>
+                      </div>
+                      
+                     <!-- HOW TO ADD A PROJECT: Duplicate a <li class="doc"> block; update:
+                          - data-title - Name of the project (organization)
+                          - .doc-title - Name of the project that will appear on the client facing site
+                          - .doc-meta - Application completeness, Timeline and status
+                          - href on "Open Site" to the GitHub Pages URL - update to the correct client facing url (can be found in each repo)
+                          - data-link on "Copy link" to the same URL - same as above -->
       
-     <!-- HOW TO ADD A PROJECT: Duplicate a <li class="doc"> block; update:
-          - data-title - Name of the project (organization)
-          - .doc-title - Name of the project that will appear on the client facing site
-          - .doc-meta - Application completeness, Timeline and status
-          - href on "Open Site" to the GitHub Pages URL - update to the correct client facing url (can be found in each repo)
-          - data-link on "Copy link" to the same URL - same as above
-      -->
-      <ul id="project-list" class="doc-list" aria-live="polite">
-
-        <!-- RBT2 Project card -->
-        <li class="doc" data-title="Roberts Bank Terminal 2 Project">
-          <div class="doc-body">
-            <h3 class="doc-title">Roberts Bank Terminal 2 Project</h3>
-            <p class="doc-meta">Application Completeness: July 2023 • Timeline: 2 Years • Status: Under Review </p>
-          </div>
-          <div class="doc-actions">
-            <a class="btn btn-primary" href="https://ffhpp-strategic-projects.github.io/Roberts-Bank-Terminal-2-Project/" target="_blank" rel="noopener noreferrer">View</a>
-          </div>
-        </li>
-        
-        <!-- Durplicate more projects below this line. Copy the code block above from <li to </li> and update the white text.n-->
-
-        
-        <!-- Paste coding for additional cards within the Additional Resources section above this line -->
+                      <ul id="project-list" class="doc-list" aria-live="polite">
+                
+                        <!-- RBT2 Project card -->
+                        <li class="doc" data-title="Roberts Bank Terminal 2 Project">
+                          <div class="doc-body">
+                            <h3 class="doc-title">Roberts Bank Terminal 2 Project</h3>
+                            <p class="doc-meta">Application Completeness: July 2023 • Timeline: 2 Years • Status: Under Review </p>
+                          </div>
+                          <div class="doc-actions">
+                            <a class="btn btn-primary" href="https://ffhpp-strategic-projects.github.io/Roberts-Bank-Terminal-2-Project/" target="_blank" rel="noopener noreferrer">View</a>
+                          </div>
+                        </li>
+                        
+                        <!-- Durplicate more projects below this line. Copy the code block above from <li to </li> and update the white text-->
+                
+                        
+                        <!-- Paste coding for additional cards within the Additional Resources section above this line -->
 
           </ul>
     </section>
